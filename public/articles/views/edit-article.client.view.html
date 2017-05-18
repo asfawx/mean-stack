@@ -1,0 +1,19 @@
+<section data-ng-controller="ArticlesController" data-ng-init="findOne()">
+    <h1>Edit Article</h1>
+
+    <form data-ng-submit="update()" novalidate>
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" id="title" data-ng-model="article.title" class="form-control" placeholder="Title" required />
+        </div>
+        <div class="form-group">
+            <label for="content">Content</label>
+            <textarea id="content" data-ng-model="article.content" cols="30" rows="10" class="form-control" placeholder="Content"></textarea>
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+        <div data-ng-show="error" class="alert alert-danger">
+            <strong data-ng-bind="error"></strong>
+        </div>
+    </form>
+
+</section>

@@ -1,0 +1,17 @@
+<section data-ng-controller="ArticlesController" ng-init="find()">
+    <h1>Articles</h1>
+    <ul class="list-group">
+        <li data-ng-repeat="article in articles" class="list-group-item">
+            <a data-ng-href="#!/articles/{{ article._id }}" data-ng-bind="article.title">
+            </a>
+            <br />
+            <small data-ng-bind="article.created | date:'medium'"></small>
+            <small>/</small>
+            <small data-ng-bind="article.creator.fullName"></small>
+            <p data-ng-bind="article.content"></p>
+        </li>
+    </ul>
+    <div data-ng-hide="!articles || articles.length" class="alerrt alert-info">
+        No articles yet, why dont't you <a href="/#!/articles/create">create one</a>?
+    </div>
+</section>

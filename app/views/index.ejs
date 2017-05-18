@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmls:ng="http://angularjs.org">
+
+<head>
+    <title>
+        <%= title %>
+    </title>
+    <link href="/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="/css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="container-fluid">
+        <section ng-view>
+        </section>
+    </div>
+
+    <script type="text/javascript">
+        window.user = <%- user || 'null' %>;
+    </script>
+
+    <script src="/socket.io/socket.io.js"></script>
+
+    <script src="/lib/angular/angular.js"></script>
+    <script src="/lib/angular-route/angular-route.js"></script>
+    <script src="/lib/angular-resource/angular-resource.js"></script>
+
+    <script src="/articles/articles.client.module.js"></script>
+    <script src="/articles/config/articles.client.routes.js"></script>
+    <script src="/articles/services/articles.client.service.js"></script>
+    <script src="/articles/controllers/articles.client.controller.js"></script>
+
+    <script src="/example/example.client.module.js"></script>
+    <script src="/example/config/example.client.routes.js"></script>
+    <script src="/example/controllers/example.client.controller.js"></script>
+
+    <script src="/auth/users.client.module.js"></script>
+    <script src="/auth/services/authentication.client.service.js"></script>
+
+    <script src="/chat/chat.client.module.js"></script>
+    <script src="/chat/services/socket.client.service.js"></script>
+    <script src="/chat/config/chat.client.routes.js"></script>
+    <script src="/chat/controllers/chat.client.controller.js"></script>
+
+    <script src="/application.js"></script>
+</body>
+
+</html>

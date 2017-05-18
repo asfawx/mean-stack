@@ -1,0 +1,21 @@
+<section ng-controller="ExampleController as eCtrl">
+    <div data-ng-show="!authentication.user">
+        <a href="/signup" class="btn btn-default">Signup</a>
+        <a href="/signin" class="btn btn-default">Signin</a>
+    </div>
+    <div data-ng-show="authentication.user">
+        <h1>Hello <span data-ng-bind="authentication.user.fullName"></span></h1>
+        <a href="/signout" class="btn btn-default">Signout</a>
+        <ul class="nav nav-pills">
+            <li role="presentation">
+                <a href="/#!/chat">Chat</a>                
+            </li>
+            <li>
+                <a href="/#!/articles">List Articles</a>                
+            </li>
+            <li>
+                <a href="/#!/articles/create">Create Article</a>
+            </li>
+        </ul>
+    </div>
+</section>

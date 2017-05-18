@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>
+        <%= title %>
+    </title>
+    <link href="/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <% for(var i in messages) { %>
+                    <div class="flash alert alert-warning">
+                        <%= messages[i] %>
+                    </div>
+                    <% } %>
+                        <form action="/signin" method="post">
+                            <div class="form-group">
+                                <label for="username">Username:</label>
+                                <input type="text" name="username" class="form-control" />
+                            </div>
+                            <div>
+                                <label for="password">Password:</label>
+                                <input type="text" name="password" class="form-control" />
+                            </div>
+                            <div>
+                                <input type="submit" value="Sign In" class="btn btn-default" />
+                            </div>
+                        </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

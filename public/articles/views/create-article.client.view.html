@@ -1,0 +1,21 @@
+<section data-ng-controller="ArticlesController">
+    <h1>New Article</h1>
+    <form data-ng-submit="create()" novalidate>
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" data-ng-model="title" id="title" class="form-control" placeholder="Title" required>
+        </div>
+        <div class="form-group">
+            <label for="content">content</label>
+            <textarea data-ng-model="content" id="content" cols="30" rows="10" class="form-control" placeholder="Content"></textarea>
+        </div>
+        <div>
+            <input type="submit" class="btn btn-default" />
+        </div>
+        <div data-ng-show="error"
+            class="alert alert-danger">
+            <strong data-ng-bind="error"></strong>
+        </div>
+
+    </form>
+</section>
